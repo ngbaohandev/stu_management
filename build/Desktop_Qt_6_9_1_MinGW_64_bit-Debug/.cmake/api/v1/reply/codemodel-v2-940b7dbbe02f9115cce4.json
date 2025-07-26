@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-8d0540f744682cd9e18d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Hello_world",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Hello_world::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Hello_world-Debug-a905bb84d6efdbeac83c.json",
+					"name" : "Hello_world",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Hello_world_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Hello_world_autogen-Debug-405cb1e54cb8f36af039.json",
+					"name" : "Hello_world_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Hello_world_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Hello_world_autogen_timestamp_deps-Debug-9900b5a396815f4eec25.json",
+					"name" : "Hello_world_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/HOC_CODE_C++/Qt_project/Hello_world/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug",
+		"source" : "D:/HOC_CODE_C++/Qt_project/Hello_world"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

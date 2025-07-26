@@ -1,46 +1,23 @@
-#include "StudentLib.h"
-#include <iostream>
-using namespace std;
+#include "mainwindow.h"
 
-int main() {
-    StudentManager manager("students.csv");
-    int choice;
-    
-    do {
-        cout << "\nStudent Management System\n";
-        cout << "1. Add new students\n";
-        cout << "2. Display all students\n";
-        cout << "3. Save to CSV\n";
-        cout << "4. Load from CSV\n";
-        cout << "0. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
-        cin.ignore();
+#include <QApplication>
+#include <QLocale>
+#include <QTranslator>
 
-        switch (choice) {
-            case 1: {
-                int numStudents;
-                cout << "Enter number of students: ";
-                cin >> numStudents;
-                cin.ignore();
-                manager.addStudents(numStudents);
-                break;
-            }
-            case 2:
-                manager.displayAll();
-                break;
-            case 3:
-                if (manager.saveToCSV()) {
-                    cout << "Data saved successfully!\n";
-                }
-                break;
-            case 4:
-                if (manager.loadFromCSV()) {
-                    cout << "Data loaded successfully!\n";
-                }
-                break;
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    QTranslator translator;
+    const QStringList uiLanguages = QLocale::system().uiLanguages();
+    for (const QString &locale : uiLanguages) {
+        const QString baseName = "Hello_world_" + QLocale(locale).name();
+        if (translator.load(":/i18n/" + baseName)) {
+            a.installTranslator(&translator);
+            break;
         }
-    } while (choice != 0);
-
-    return 0;
+    }
+    MainWindow w;
+    w.show();
+    return a.exec();
 }
